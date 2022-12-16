@@ -8,6 +8,9 @@ module.exports = function (defaults) {
     postcssOptions: {
       compile: {
         plugins: [require('tailwindcss')('tailwind.config.js')],
+        enabled: true,
+        includePaths: ['app'],
+        cacheInclude: [/.*\.(css|js|hbs|html)$/, /.\/tailwind\.config\.js/],
       },
     },
   });
